@@ -1,0 +1,31 @@
+{
+  "name": "ma_ocr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G10/MA_OCR.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G10/MA_OCR/issues"
+  },
+  "homepage": "https://github.com/GSG-G10/MA_OCR#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "env": "0.0.2",
+    "eslint": "^7.32.0",
+    "express": "^4.17.1"
+  }
+}
