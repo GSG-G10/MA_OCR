@@ -1,71 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>MA_OCR</title>
-</head>
-<body>
-  <div class="main-contenar">
-    <div>
-      <label class="input-img-label">choose the picture</label><br>
-      <input class="input-img-input" type="file" required >
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MA_OCR</title>
+  </head>
+  <body>
+    <div class="main-contenar">
+      <div>
+        <label class="input-img-label">choose the picture</label><br />
+        <input class="input-img-input" type="file" required />
+      </div>
+      <div class="choose-language">
+        <label class="language-label" for="language">choose the language</label
+        ><br />
+        <select class="language-select" name="language">
+          <option value="English">English</option>
+          <option value="French">French</option>
+          <option value="Arabic">Arabic</option>
+          <option value="German">German</option>
+          <option value="Chinese">Chinese</option>
+        </select>
+      </div>
+      <div class="type-label">
+        <label class="type-label-what" for="to-what">just choose one</label
+        ><br />
+        <select class="type-select" name="to-what">
+          <option value="Microsoft Word (docx)">Microsoft Word (docx)</option>
+          <option value="Microsoft Excle (xlsx)">Microsoft Excle (xlsx)</option>
+          <option value="Text Plain (txt)">Text Plain (txt)</option>
+        </select>
+      </div>
     </div>
-    <div class="choose-language">
-      <label class="language-label" for="language">choose the language</label><br>
-      <select class="language-select" name="language">
-        <option value="English">English</option>
-        <option value="French">French</option>
-        <option value="Arabic">Arabic</option>
-        <option value="German">German</option>
-        <option value="Chinese">Chinese</option>
-      </select>
-    </div>
-    <div class="type-label">
-      <label class="type-label-what"for="to-what">just choose one</label><br>
-      <select class="type-select" name="to-what">
-        <option value="Microsoft Word (docx)">Microsoft Word (docx)</option>
-        <option value="Microsoft Excle (xlsx)">Microsoft Excle (xlsx)</option>
-        <option value="Text Plain (txt)">Text Plain (txt)</option>
-      </select>
-    </div>
-  </div>
-
-
-
-
-
-
-
-  <!-- <div class="main-form">
-    <div class="input-img">
-      <label class="input-img-label">choose the picture</label>
-      <input class="input-img-input" type="file" id="myfile" name="myfile" required >
-    </div>
-
-    <div class="choose-language">
-      <label class="language-label" for="language">choose the language</label>
-      <select class="language-select" name="language">
-        <option value="English">English</option>
-        <option value="French">French</option>
-        <option value="Arabic">Arabic</option>
-        <option value="German">German</option>
-        <option value="Chinese">Chinese</option>
-      </select>
-    </div>
-
-    <div class="type-label">
-      <label class="type-label-what"for="to-what">just choose one</label>
-      <select class="type-select" name="to-what">
-        <option value="Microsoft Word (docx)">Microsoft Word (docx)</option>
-        <option value="Microsoft Excle (xlsx)">Microsoft Excle (xlsx)</option>
-        <option value="Text Plain (txt)">Text Plain (txt)</option>
-      </select>
-    </div>
-    <input type="submit">
-  </div> -->
-  <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>

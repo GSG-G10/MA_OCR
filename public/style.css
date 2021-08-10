@@ -1,17 +1,17 @@
-*{
-  margin: 0 ;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.main-form{
+.main-form {
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid rgb(118, 113, 113);
 }
-.main-contenar{
+.main-contenar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,20 +19,17 @@
   height: 8rem;
   justify-content: space-around;
   border: 1px solid rgb(234, 248, 229);
-  background-color:rgb(234, 248, 229) ;
+  background-color: rgb(234, 248, 229);
   box-shadow: 5px 5px 10px rgb(150, 150, 150);
-
-
-} 
+}
 
 .input-img-label {
   color: rgb(63, 179, 179);
   font-size: 22px;
   margin-bottom: 5px;
   display: block;
-
 }
-.input-img-input{
+.input-img-input {
   padding: 3px;
   font-size: 18px;
   background: white;
@@ -41,7 +38,7 @@
   box-shadow: 5px 5px 10px black;
   outline: none;
 }
-::-webkit-file-upload-button{
+::-webkit-file-upload-button {
   color: white;
   background-color: rgb(101, 169, 137);
   padding: 12px;
@@ -51,13 +48,13 @@
   outline: none;
 }
 
-.language-label{
+.language-label {
   color: rgb(63, 179, 179);
   font-size: 22px;
   margin-bottom: 5px;
   display: block;
 }
-.language-select{
+.language-select {
   color: white;
   background-color: rgb(101, 169, 137);
   padding: 12px;
@@ -69,24 +66,21 @@
   width: 182px;
   padding-left: 50px;
   box-shadow: 1px 0 1px 1px #6b4559;
-
 }
-.type-label-what{
+.type-label-what {
   color: rgb(63, 179, 179);
   font-size: 22px;
   margin-bottom: 5px;
   display: block;
-
 }
-.type-select{
+.type-select {
   color: white;
   background-color: rgb(101, 169, 137);
   padding: 12px;
   border: none;
   border-radius: 50px;
   box-shadow: 1px 0 1px 1px #6b4559;
-  outline:none;
-  font-size:18px;
+  outline: none;
+  font-size: 18px;
   box-shadow: 1px 0 1px 1px #6b4559;
-
 }
