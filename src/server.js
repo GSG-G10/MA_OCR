@@ -1,12 +1,17 @@
 const express = require('express');
-const app = express () ;
-const port  = 3000
+const app = express();
+const { homepageRouter, ocrRouter } = require('./Routes');
+const port = 3000;
+app.use(express.json());
 
-app.get('/' , (req , res) => {
-  res.send('Hello world')
-})
+app.use(express.urlencoded({ extended: false }));
 
 
-app.listen(port , () => {
-  console.log(`App running on http://localhost:${port}`);
-})
+
+app.use('/', homepageRouter);
+
+app.use(ocrRouter);
+
+app.listen(port, () => {
+    console.log(`App running on http://localhost:${port}`);
+});
