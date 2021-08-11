@@ -1,2 +1,3 @@
 const ocrRouter = require('./ocr');
-module.exports = { ocrRouter };
+const languagesRouter = require('./languages');
+module.exports = { ocrRouter, languagesRouter };
