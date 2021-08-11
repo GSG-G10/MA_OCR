@@ -5,7 +5,6 @@ const { url } = require('inspector');
 
 const ocrFileController = (req, res) => {
     const language = req.body.lang;
-    console.log(req.body);
     const dirPath = path.join(__dirname, '../..', 'uploads');
     fs.readdir(dirPath, (err, files) => {
         if (err) {
@@ -33,7 +32,6 @@ const ocrFileController = (req, res) => {
 
 const ocrUrlController = (req, res) => {
     const url = req.body.link;
-    console.log(req.body);
     const language = req.body.lang;
     ocrSpaceApiWrapper(url, { apiKey: process.env.API_KEY, language: language })
         .then(data => res.json(data.ParsedResults[0].ParsedText))
