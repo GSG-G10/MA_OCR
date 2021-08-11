@@ -14,6 +14,16 @@ const imgRenderFile = () => {
         ocrImg.style.display = 'block';
     } else ocrImg.src = './img/defalut.png';
 }
+
+fetch('/languages').then(res => res.json()).then(data => {
+    for (let lang in data) {
+        const opt = document.createElement('option');
+        opt.value = data[lang];
+        opt.innerText = lang;
+        language.appendChild(opt);
+    }
+});
+
 ocrForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (select.value == 'file') {
@@ -61,11 +71,11 @@ changeFileUrl.addEventListener('click', () => {
     if (typeFile === 'file') {
         urlInput.style.display = 'none';
         inputField.style.display = 'block';
-        textLabel.textContent = 'Choose your Picture';
+        textLabel.textContent = 'Upload image';
     } else if (typeFile === 'url') {
         inputField.style.display = 'none';
         urlInput.style.display = 'block';
-        textLabel.textContent = 'Enter Picture Url';
+        textLabel.textContent = 'Image url';
     }
 });
 

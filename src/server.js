@@ -5,8 +5,8 @@ require('env2')('.env');
 const { notFoundController, serverErrController } = require('./controllers');
 const app = express();
 
-const { ocrRouter } = require('./Routes');
-const port = 3000;
+const { ocrRouter, languagesRouter } = require('./Routes');
+const port = process.env.port || 3000;
 
 app.use(compression());
 
@@ -18,10 +18,10 @@ app.use(express.static('public'));
 
 app.use('/ocr', ocrRouter);
 
+app.use('/languages', languagesRouter);
+
 app.use(notFoundController);
 
 app.use(serverErrController);
 
-app.listen(port, () => {
-    console.log(`App running on http://localhost:${port}`);
-});
+app.listen(port);
