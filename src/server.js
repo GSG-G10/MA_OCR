@@ -6,7 +6,7 @@ const { notFoundController, serverErrController } = require('./controllers');
 const app = express();
 
 const { ocrRouter, languagesRouter } = require('./Routes');
-const port = 3000;
+const port = process.env.port || 3000;
 
 app.use(compression());
 
@@ -24,6 +24,4 @@ app.use(notFoundController);
 
 app.use(serverErrController);
 
-app.listen(port, () => {
-    console.log(`App running on http://localhost:${port}`);
-});
+app.listen(port);
