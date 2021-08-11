@@ -21,19 +21,20 @@
             </select>
           </div>
 
-            <div class="choose-language">
-                <label class="language-label" for="language">choose the language</label
-        ><br />
-        <select class="language-select" name="lang" id="language">
-          <option value="eng">English</option>
-          <option value="French">French</option>
-          <option value="Arabic">Arabic</option>
-          <option value="German">German</option>
-          <option value="Chinese">Chinese</option>
-        </select>
-      </div>
-      <div>
-        <label class="input-img-label">Enter Picture Url</label><br />
+        <div class="choose-language">
+          <label class="language-label" for="language"
+            >choose the language</label
+          ><br />
+          <select class="language-select" name="lang" id="language">
+            <option value="eng">English</option>
+            <option value="French">French</option>
+            <option value="Arabic">Arabic</option>
+            <option value="German">German</option>
+            <option value="Chinese">Chinese</option>
+          </select>
+        </div>
+        <div class="div-const">
+            <label class="input-img-label">Enter Picture Url</label><br />
                 <input class="input-img-input" type="file" name="file" id="file" data-multiple-caption="{count} files selected" onchange="imgRender()" multiple />
                 <input type="url" name="url" class="url-input">
             </div>
@@ -45,7 +46,7 @@
     <div class="gitting-text">
         <textarea class="text-paragraph"></textarea>
         <div id="ocr-img-container">
-            <img src="" alt="selectd image">
+            <img src="./img/defalut.png" alt="selected image">
         </div>
 
     </div>
