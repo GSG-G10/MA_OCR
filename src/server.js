@@ -1,9 +1,12 @@
 const express = require('express');
+const compression = require('compression');
 require('env2')('.env');
 const app = express();
 
 const { homepageRouter, ocrRouter } = require('./Routes');
 const port = 3000;
+
+app.use(compression());
 
 app.use(express.json());
 
