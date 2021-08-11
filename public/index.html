@@ -35,8 +35,8 @@
         </div>
         <div class="div-const">
             <label class="input-img-label">Enter Picture Url</label><br />
-                <input class="input-img-input" type="file" name="file" id="file" data-multiple-caption="{count} files selected" onchange="imgRender()" multiple />
-                <input type="url" name="url" class="url-input">
+                <input class="input-img-input" type="file" name="file" id="file" data-multiple-caption="{count} files selected" onchange="imgRenderFile()" multiple />
+                <input type="url" name="url" class="url-input" id="ocr-url" oninput="imgRenderUrl()">
             </div>
         </div>
         <div>
@@ -46,7 +46,7 @@
     <div class="gitting-text">
         <textarea class="text-paragraph"></textarea>
         <div id="ocr-img-container">
-            <img src="./img/defalut.png" alt="selected image">
+            <img src="./img/defalut.png" alt="selected image" onerror="imgErrHandler()">
         </div>
 
     </div>
