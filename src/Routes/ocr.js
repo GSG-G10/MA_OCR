@@ -15,6 +15,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+router.get('/url', (req, res) => {
+    res.status(500).send();
+});
+
 router.post('/url', ocrUrlController);
 
 router.post('/file', upload.single('file'), ocrFileController);
