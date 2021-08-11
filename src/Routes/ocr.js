@@ -1,12 +1,23 @@
 const express = require('express');
+const multer = require('multer');
 const router = express.Router();
-const { homepageController, } = require('../controllers');
+const { ocrFileController, ocrUrlController } = require('../controllers');
 
-
-router.get('/ocr', (req, res) => {
-    res.send("hi ocr");
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads');
+    },
+    filename: (req, file, cb) => {
+        const { originalname } = file;
+        cb(null, originalname);
+    }
 });
 
+const upload = multer({ storage });
+
+router.post('/url', ocrUrlController);
+
+router.post('/file', upload.single('file'), ocrFileController);
 
 
 

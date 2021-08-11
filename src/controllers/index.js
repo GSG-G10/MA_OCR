@@ -1,3 +1,4 @@
 const homePageController = require('./homePage');
-
-module.exports = { homePageController, };
+const ocrFileController = require('./ocr').ocrFileController;
+const ocrUrlController = require('./ocr').ocrUrlController;
+module.exports = { homePageController, ocrFileController, ocrUrlController };
