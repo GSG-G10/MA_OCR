@@ -5,7 +5,7 @@ require('env2')('.env');
 const { notFoundController, serverErrController } = require('./controllers');
 const app = express();
 
-const { ocrRouter } = require('./Routes');
+const { ocrRouter, languagesRouter } = require('./Routes');
 const port = 3000;
 
 app.use(compression());
@@ -17,6 +17,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
 app.use('/ocr', ocrRouter);
+
+app.use('/languages', languagesRouter);
 
 app.use(notFoundController);
 
