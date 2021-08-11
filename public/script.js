@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const ocrForm = document.querySelector('#ocr-form');
 const select = document.querySelector('#select');
 const ocrUrl = document.querySelector('#ocr-url');
@@ -10,7 +11,8 @@ ocrForm.addEventListener('submit', (e) => {
       body: new FormData(ocrForm),
 
       method: 'post',
-    }).then((response) => response.json())
+    })
+      .then((response) => response.json())
       .then((data) => console.log(data));
   } else {
     fetch('/ocr/url', {
@@ -23,7 +25,22 @@ ocrForm.addEventListener('submit', (e) => {
         lang: language.value,
       }),
       method: 'post',
-    }).then((response) => response.json())
+    })
+      .then((response) => response.json())
       .then((data) => console.log(data));
+  }
+});
+const changeFileUrl = document.querySelector('.type-select');
+const inputField = document.querySelector('.input-img-input');
+const urlInput = document.querySelector('.url-input');
+
+changeFileUrl.addEventListener('click', () => {
+  const typeFile = select.options[select.selectedIndex].value;
+  if (typeFile === 'file') {
+    urlInput.style.display = 'none';
+    inputField.style.display = 'block';
+  } else if (typeFile === 'url') {
+    inputField.style.display = 'none';
+    urlInput.style.display = 'block';
   }
 });

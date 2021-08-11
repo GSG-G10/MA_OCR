@@ -1,93 +1,92 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .main-contenar {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 8rem;
-    justify-content: space-around;
-    border: 1px solid rgb(234, 248, 229);
-    background-color: #F3E8E8;
-    box-shadow: 5px 5px 10px rgb(150, 150, 150);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 8rem;
+  justify-content: space-around;
+  border: 1px solid rgb(234, 248, 229);
+  background-color: #f3e8e8;
+  box-shadow: 5px 5px 10px rgb(150, 150, 150);
 }
 
 .input-img-label {
-    color: black;
-    font-size: 22px;
-    margin-bottom: 5px;
-    display: block;
+  color: black;
+  font-size: 22px;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .input-img-input {
-    padding: 3px;
-    font-size: 18px;
-    background: white;
-    border-radius: 50px;
-    width: 250px;
-    box-shadow: 5px 5px 10px black;
-    outline: none;
-    cursor: pointer;
+  padding: 3px;
+  font-size: 18px;
+  background: white;
+  border-radius: 50px;
+  width: 250px;
+  box-shadow: 5px 5px 10px black;
+  outline: none;
+  cursor: pointer;
 }
 
 ::-webkit-file-upload-button {
-    color: white;
-    background-color: #DF474B
-    ;
-    padding: 12px;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 1px 0 1px 1px #6b4559;
-    outline: none;
-    cursor: pointer;
+  color: white;
+  background-color: #df474b;
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 1px 0 1px 1px #6b4559;
+  outline: none;
+  cursor: pointer;
 }
 
 ::-webkit-file-upload-button:hover {
-    background-color: #c73035;
-    transition: 0.5s ease-in-out;
+  background-color: #c73035;
+  transition: 0.5s ease-in-out;
 }
 
 .language-label {
-    color: black;
-    font-size: 22px;
-    margin-bottom: 5px;
-    display: block;
+  color: black;
+  font-size: 22px;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .language-select {
-    color: white;
-    background-color: #DF474B;
-    padding: 12px;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 1px 0 1px 1px #6b4559;
-    outline: none;
-    font-size: 20px;
-    width: 182px;
-    padding-left: 50px;
-    box-shadow: 1px 0 1px 1px #6b4559;
-    cursor: pointer;
+  color: white;
+  background-color: #df474b;
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 1px 0 1px 1px #6b4559;
+  outline: none;
+  font-size: 20px;
+  width: 182px;
+  padding-left: 50px;
+  box-shadow: 1px 0 1px 1px #6b4559;
+  cursor: pointer;
 }
 
 .language-select:hover {
-    background-color: #c73035;
-    transition: 0.5s ease-in-out;
+  background-color: #c73035;
+  transition: 0.5s ease-in-out;
 }
 
 .type-label-what {
-    color: black;
-    font-size: 22px;
-    margin-bottom: 5px;
-    display: block;
+  color: black;
+  font-size: 22px;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .type-select {
   color: white;
-  background-color: #DF474B;
+  background-color: #df474b;
   border: none;
   border-radius: 50px;
   box-shadow: 1px 0 1px 1px #6b4559;
@@ -104,27 +103,27 @@
 }
 
 .type-select:hover {
-    background-color: #c73035;
-    transition: 0.5s ease-in-out;
+  background-color: #c73035;
+  transition: 0.5s ease-in-out;
 }
 
 .input-btn {
-    display: block;
-    margin: 0.8rem auto;
-    background-color: #DF474B;
-    color: white;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 80%;
-    box-shadow: 2px 0 1px 1px #6b4559;
-    font-size: 20px;
+  display: block;
+  margin: 0.8rem auto;
+  background-color: #df474b;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 80%;
+  box-shadow: 2px 0 1px 1px #6b4559;
+  font-size: 20px;
 }
 
 .input-btn:hover {
-    background-color: #c73035 ;
-    transition: 0.5s ease-in-out;
+  background-color: #c73035;
+  transition: 0.5s ease-in-out;
 }
 
 .text-paragraph {
@@ -137,11 +136,15 @@
   width: 80%;
   height: 16rem;
   background-color: white;
-  box-shadow: 7px 10px 22px 7px #DF474B;
+  box-shadow: 7px 10px 22px 7px #df474b;
   font-weight: 50;
   outline: none;
-
 }
-.url-input{
-  visibility: hidden;
+.url-input {
+  display: none;
+  font-size: 18px;
+  border-radius: 50px;
+  color: white;
+  background-color: #df474b;
+  padding: 12px 40px;
 }
