@@ -9,13 +9,18 @@
     <title>MA_OCR</title>
 </head>
 
-<body>
+<body>بدي
     <form action="/ocr/file" id="ocr-form" method="POST" enctype="multipart/form-data">
         <div class="main-contenar">
-            <div>
-                <label class="input-img-label">choose the picture</label><br />
-                <input class="input-img-input" type="file" name="file" id="file" data-multiple-caption="{count} files selected" multiple />
-            </div>
+          <div class="type-label">
+            <label class="type-label-what" for="to-what">just choose one</label
+            ><br />
+            <select class="type-select" id="select">
+              <option value="file">File</option>
+              <option value="url">URL</option>
+            </select>
+          </div>
+
             <div class="choose-language">
                 <label class="language-label" for="language">choose the language</label
         ><br />
@@ -27,32 +32,18 @@
           <option value="Chinese">Chinese</option>
         </select>
       </div>
-      <div class="type-label">
-        <label class="type-label-what" for="to-what">just choose one</label
-        ><br />
-        <select class="type-select" id="select">
-          <option value="url">URL</option>
-          <option value="file">File</option>
-        </select>
-      </div>
+      <div>
+        <label class="input-img-label">Enter Picture Url</label><br />
+        <input class="input-img-input" type="file" name="file" id="file" data-multiple-caption="{count} files selected" multiple />
+        <input type="url" name="url" class="url">
+    </div>
     </div>
     <div>
       <input class="input-btn" type="submit" value="Submit">
     </div>
     </form>
     <div class="gitting-text">
-      <p class="text-paragraph">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-        officia harum quasi? Reprehenderit vitae adipisci placeat obcaecati
-        nobis facere, error sequi dolorem dicta a! Sequi sit illum esse pariatur
-        asperiores.        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-        officia harum quasi? Reprehenderit vitae adipisci placeat obcaecati
-        nobis facere, error sequi dolorem dicta a! Sequi sit illum esse pariatur
-        asperiores        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-        officia harum quasi? Reprehenderit vitae adipisci placeat obcaecati
-        nobis facere, error sequi dolorem dicta a! Sequi sit illum esse pariatur
-        asperiores
-      </p>
+      <textarea class="text-paragraph"></textarea>
     </div>
     <script src="./script.js"></script>
   </body>
