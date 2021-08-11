@@ -6,13 +6,9 @@
 
 .main-form {
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid rgb(118, 113, 113);
 }
 .main-contenar {
-
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -86,13 +82,16 @@
 .type-select {
   color: white;
   background-color: rgb(81, 155, 121);
-  padding: 12px;
   border: none;
   border-radius: 50px;
   box-shadow: 1px 0 1px 1px #6b4559;
   outline: none;
   font-size: 18px;
   box-shadow: 1px 0 1px 1px #6b4559;
+  width: 150px;
+  text-align: center;
+  padding: 12px 50px;
+
 }
 .type-select:hover{
   background-color: rgb(64, 109, 88);
@@ -126,6 +125,4 @@
   height: 16rem;
   background-color: rgba(221, 221, 221, 0.474);
   box-shadow: 15px 10px 22px 7px #3c3b3b;
-
-  
 }
