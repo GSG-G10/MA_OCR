@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>MA_OCR</title>
-  </head>
-  <body>
-    <div class="main-contenar">
-      <div class="type-label">
-        <label class="type-label-what" for="to-what">choose img format</label
+</head>
+
+<body>بدي
+    <form action="/ocr/file" id="ocr-form" method="POST" enctype="multipart/form-data">
+        <div class="main-contenar">
+          <div class="type-label">
+            <label class="type-label-what" for="to-what">just choose one</label
+            ><br />
+            <select class="type-select" id="select">
+              <option value="file">File</option>
+              <option value="url">URL</option>
+            </select>
+          </div>
+
+            <div class="choose-language">
+                <label class="language-label" for="language">choose the language</label
         ><br />
-        <select class="type-select" name="to-what">
-          <option class="file" value="File">File</option>
-          <option class="url" value="URL">URL</option>
-        </select>
-      </div>
-      <div class="choose-language">
-        <label class="language-label" for="language">choose the language</label
-        ><br />
-        <select class="language-select" name="language">
-          <option value="English">English</option>
+        <select class="language-select" name="lang" id="language">
+          <option value="eng">English</option>
           <option value="French">French</option>
           <option value="Arabic">Arabic</option>
           <option value="German">German</option>
@@ -29,27 +33,17 @@
         </select>
       </div>
       <div>
-        <label class="input-img-label">choose the picture</label><br />
-        <input class="input-img-input" type="file" required />
-      </div>
+        <label class="input-img-label">Enter Picture Url</label><br />
+        <input class="input-img-input" type="file" name="file" id="file" data-multiple-caption="{count} files selected" multiple />
+        <input type="url" name="url" class="url">
+    </div>
     </div>
     <div>
       <input class="input-btn" type="submit" value="Submit">
     </div>
-
+    </form>
     <div class="gitting-text">
-      <p class="text-paragraph">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-        officia harum quasi? Reprehenderit vitae adipisci placeat obcaecati
-        nobis facere, error sequi dolorem dicta a! Sequi sit illum esse pariatur
-        asperiores.        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-        officia harum quasi? Reprehenderit vitae adipisci placeat obcaecati
-        nobis facere, error sequi dolorem dicta a! Sequi sit illum esse pariatur
-        asperiores        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-        officia harum quasi? Reprehenderit vitae adipisci placeat obcaecati
-        nobis facere, error sequi dolorem dicta a! Sequi sit illum esse pariatur
-        asperiores
-      </p>
+      <textarea class="text-paragraph"></textarea>
     </div>
     <script src="./script.js"></script>
   </body>
