@@ -7,7 +7,7 @@
         "test": "test"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "jest test/test.js",
         "dev": "nodemon ./src/server.js"
     },
     "repository": {
@@ -27,12 +27,14 @@
         "eslint-plugin-jsx-a11y": "^6.4.1",
         "eslint-plugin-react": "^7.24.0",
         "eslint-plugin-react-hooks": "^4.2.0",
-        "nodemon": "^2.0.12"
+        "nodemon": "^2.0.12",
+        "supertest": "^6.1.5"
     },
     "dependencies": {
         "compression": "^1.7.4",
         "env2": "^2.2.2",
         "express": "^4.17.1",
+        "jest": "^27.0.6",
         "multer": "^1.4.3",
         "ocr-space-api-wrapper": "^1.0.6"
     }

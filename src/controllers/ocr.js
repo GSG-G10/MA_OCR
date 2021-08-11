@@ -14,16 +14,22 @@ const ocrFileController = (req, res) => {
                 if (err) {
                     res.status(500).send();
                 } else {
-                    const buffer = new Buffer(data).toString('base64');
-                    ocrSpaceApiWrapper(`data:image/png;base64,${buffer}`, { apiKey: process.env.API_KEY_OCR, language: language })
-                        .then(data => res.json(data.ParsedResults[0].ParsedText)).then(fs.unlink(path.join(dirPath, files[0]), (err) => {
-                            if (err)
-                                res.status(500).send();
-                        }))
-                        .catch(err => {
-                            if (err)
-                                res.status(500).send();
-                        });;
+                    fs.readFile(path.join(dirPath, files[0]), (err, data) => {
+                        if (err) {
+                            res.status(500).send();
+                        } else {
+                            const buffer = new Buffer(data).toString('base64');
+                            ocrSpaceApiWrapper(`data:image/png;base64,${buffer}`, { apiKey: process.env.API_KEY_OCR, language: language })
+                                .then(data => res.json(data.ParsedResults[0].ParsedText)).then(fs.unlink(path.join(dirPath, files[0]), (err) => {
+                                    if (err)
+                                        res.status(500).send();
+                                }))
+                                .catch(err => {
+                                    if (err)
+                                        res.status(500).send();
+                                });;
+                        }
+                    });
                 }
             });
         }
