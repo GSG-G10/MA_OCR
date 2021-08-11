@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MA_OCR</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MA_OCR</title>
+  </head>
+  <body>
+    <div class="main-contenar">
+      <div>
+        <label class="input-img-label">choose the picture</label><br />
+        <input class="input-img-input" type="file" required />
+      </div>
+      <div class="choose-language">
+        <label class="language-label" for="language">choose the language</label
+        ><br />
+        <select class="language-select" name="language">
+          <option value="English">English</option>
+          <option value="French">French</option>
+          <option value="Arabic">Arabic</option>
+          <option value="German">German</option>
+          <option value="Chinese">Chinese</option>
+        </select>
+      </div>
+      <div class="type-label">
+        <label class="type-label-what" for="to-what">just choose one</label
+        ><br />
+        <select class="type-select" name="to-what">
+          <option value="Microsoft Word (docx)">Microsoft Word (docx)</option>
+          <option value="Microsoft Excel (xlsx)">Microsoft Excle (xlsx)</option>
+          <option value="Text Plain (txt)">Text Plain (txt)</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <input class="input-btn" type="submit" value="Submit">
+    </div>
+
+    <div class="gitting-text">
+      <p class="text-paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+        officia harum quasi? Reprehenderit vitae adipisci placeat obcaecati
+        nobis facere, error sequi dolorem dicta a! Sequi sit illum esse pariatur
+        asperiores.        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+        officia harum quasi? Reprehenderit vitae adipisci placeat obcaecati
+        nobis facere, error sequi dolorem dicta a! Sequi sit illum esse pariatur
+        asperiores        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+        officia harum quasi? Reprehenderit vitae adipisci placeat obcaecati
+        nobis facere, error sequi dolorem dicta a! Sequi sit illum esse pariatur
+        asperiores
+      </p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>

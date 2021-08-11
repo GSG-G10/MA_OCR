@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-form {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(118, 113, 113);
+}
+.main-contenar {
+
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 8rem;
+  justify-content: space-around;
+  border: 1px solid rgb(234, 248, 229);
+  background-color: rgb(234, 248, 229);
+  box-shadow: 5px 5px 10px rgb(150, 150, 150);
+}
+
+.input-img-label {
+  color: rgb(63, 179, 179);
+  font-size: 22px;
+  margin-bottom: 5px;
+  display: block;
+}
+.input-img-input {
+  padding: 3px;
+  font-size: 18px;
+  background: white;
+  border-radius: 50px;
+  width: 250px;
+  box-shadow: 5px 5px 10px black;
+  outline: none;
+}
+::-webkit-file-upload-button {
+  color: white;
+  background-color: rgb(81, 155, 121);
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 1px 0 1px 1px #6b4559;
+  outline: none;
+}
+::-webkit-file-upload-button:hover{
+  background-color: rgb(64, 109, 88);
+  transition: 0.5s ease-in-out;
+}
+
+.language-label {
+  color: rgb(63, 179, 179);
+  font-size: 22px;
+  margin-bottom: 5px;
+  display: block;
+}
+.language-select {
+  color: white;
+  background-color: rgb(81, 155, 121);
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 1px 0 1px 1px #6b4559;
+  outline: none;
+  font-size: 20px;
+  width: 182px;
+  padding-left: 50px;
+  box-shadow: 1px 0 1px 1px #6b4559;
+}
+.language-select:hover{
+  background-color: rgb(64, 109, 88);
+  transition: 0.5s ease-in-out;
+}
+.type-label-what {
+  color: rgb(63, 179, 179);
+  font-size: 22px;
+  margin-bottom: 5px;
+  display: block;
+}
+.type-select {
+  color: white;
+  background-color: rgb(81, 155, 121);
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 1px 0 1px 1px #6b4559;
+  outline: none;
+  font-size: 18px;
+  box-shadow: 1px 0 1px 1px #6b4559;
+}
+.type-select:hover{
+  background-color: rgb(64, 109, 88);
+  transition: 0.5s ease-in-out;
+}
+.input-btn{
+  display: block;
+  margin: 0.8rem auto ;
+  background-color: #2d7c2f;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 80%;
+  box-shadow: 2px 0 1px 1px #6b4559;
+  font-size: 20px;
+}
+.input-btn:hover{
+  background-color: #2a5a2b;
+  transition: 0.5s ease-in-out;
+}
+
+.text-paragraph{
+  margin: 0 auto;
+  font-family: system-ui;
+  padding: 1rem;
+  font-size: 20px;
+  margin-top: 4rem;
+  width: 80%;
+  height: 16rem;
+  background-color: rgba(221, 221, 221, 0.474);
+  box-shadow: 15px 10px 22px 7px #3c3b3b;
+
+  
+}
