@@ -10,11 +10,17 @@ ocrForm.addEventListener('submit', (e) => {
     fetch('/ocr/file', {
       body: new FormData(ocrForm),
       method: 'post',
-    }).then((response) => response.json())
+    })
+      .then((response) => response.json())
       .then((data) => {
         if (textArea.firstChild) textArea.removeChild(textArea.firstChild);
-        textArea.appendChild(document.createTextNode(data == '' ? 'The img doesn\'t include any text...' : data));
-      }).catch((err) => console.log(err));
+        textArea.appendChild(
+          document.createTextNode(
+            data == '' ? "The img doesn't include any text..." : data
+          )
+        );
+      })
+      .catch((err) => console.log(err));
   } else {
     fetch('/ocr/url', {
       headers: {
@@ -26,25 +32,44 @@ ocrForm.addEventListener('submit', (e) => {
         lang: language.value,
       }),
       method: 'post',
-    }).then((response) => response.json())
+    })
+      .then((response) => response.json())
       .then((data) => {
         if (textArea.firstChild) textArea.removeChild(textArea.firstChild);
-        textArea.appendChild(document.createTextNode(data == '' ? 'The img doesn\'t include any text...' : data));
-      }).catch((err) => console.log(err));
+        textArea.appendChild(
+          document.createTextNode(
+            data == '' ? "The img doesn't include any text..." : data
+          )
+        );
+      })
+      .catch((err) => console.log(err));
   }
 });
 
 const changeFileUrl = document.querySelector('.type-select');
 const inputField = document.querySelector('.input-img-input');
 const urlInput = document.querySelector('.url-input');
+const textLabel = document.querySelector('.input-img-label');
+const btnSubmit = document.querySelector('.input-btn');
 
 changeFileUrl.addEventListener('click', () => {
   const typeFile = select.options[select.selectedIndex].value;
   if (typeFile === 'file') {
     urlInput.style.display = 'none';
     inputField.style.display = 'block';
+    textLabel.textContent = 'Choose your Picture';
   } else if (typeFile === 'url') {
     inputField.style.display = 'none';
     urlInput.style.display = 'block';
+    textLabel.textContent = 'Enter Picture Url';
+  }
+});
+
+btnSubmit.addEventListener('click', () => {
+  const validEmail = urlInput.value.includes('https://www.google.com');
+  if (urlInput.value === '') {
+    urlInput.placeholder = 'This Field cannot be empty !';
+  } else if (validEmail === false) {
+    urlInput.placeholder = 'Please Enter a Valid Link ! ';
   }
 });
