@@ -3,6 +3,22 @@ const select = document.querySelector('#select');
 const ocrUrl = document.querySelector('#ocr-url');
 const language = document.querySelector('#language');
 const textArea = document.querySelector('textarea');
+const imgContainer = document.querySelector('#ocr-img-container');
+const ocrImg = imgContainer.firstElementChild;
+const ocrFile = document.querySelector('#file');
+console.log(ocrFile);
+ocrImg.onerror = () => {
+    imgContainer.appendChild(document.createTextNode('Select an img'));
+    ocrImg.style.display = 'none';
+};
+
+const imgRender = () => {
+    if (ocrFile.files && ocrFile.files[0]) {
+        console.log('hell');
+        ocrImg.src = URL.createObjectURL(ocrFile.files[0]);
+        ocrImg.style.display = 'block';
+    }
+}
 ocrForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (select.value == 'file') {
