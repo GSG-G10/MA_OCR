@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>MA_OCR</title>
-  </head>
+</head>
 
-  <body>
-    <form
-      action="/ocr/file"
-      id="ocr-form"
-      method="POST"
-      enctype="multipart/form-data"
-    >
-      <div class="main-contenar">
-        <div class="type-label">
-          <label class="type-label-what" for="to-what">just choose one</label
-          ><br />
-          <select class="type-select" id="select">
-            <option value="file">File</option>
-            <option value="url">URL</option>
-          </select>
-        </div>
+<body>
+    <form action="/ocr/file" id="ocr-form" method="POST" enctype="multipart/form-data">
+        <div class="main-contenar">
+            <div class="type-label">
+                <label class="type-label-what" for="to-what">just choose one</label
+            ><br />
+            <select class="type-select" id="select">
+              <option value="file">File</option>
+              <option value="url">URL</option>
+            </select>
+          </div>
 
         <div class="choose-language">
           <label class="language-label" for="language"
@@ -38,26 +34,23 @@
           </select>
         </div>
         <div class="div-const">
-          <label class="input-img-label">Enter Picture Url</label><br />
-          <input
-            class="input-img-input"
-            type="file"
-            name="file"
-            id="file"
-            data-multiple-caption="{count} files selected"
-            multiple
-            required
-          />
-          <input type="url" name="url" class="url-input" required/>
+            <label class="input-img-label">Enter Picture Url</label><br />
+                <input class="input-img-input" type="file" name="file" id="file" data-multiple-caption="{count} files selected" onchange="imgRender()" multiple />
+                <input type="url" name="url" class="url-input">
+            </div>
         </div>
-      </div>
-      <div>
-        <input class="input-btn" type="submit" value="Submit"/>
-      </div>
+        <div>
+            <input class="input-btn" type="submit" value="Submit">
+        </div>
     </form>
+
     <div class="gitting-text">
-      <textarea class="text-paragraph"></textarea>
+      <div id="ocr-img-container">
+          <img class="img-render" src="./img/IMG-20210806-WA0018.jpg" alt="selected image">
+      </div>
+        <textarea class="text-paragraph"></textarea>
     </div>
     <script src="./script.js"></script>
-  </body>
+</body>
+
 </html>
