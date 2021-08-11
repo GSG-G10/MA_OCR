@@ -144,7 +144,8 @@
   display: none;
   font-size: 18px;
   border-radius: 50px;
-  color: white;
-  background-color: #df474b;
-  padding: 12px 40px;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  padding: 12px 20px;
+  outline: none;
 }
