@@ -1,22 +1,7 @@
-const input = document.querySelector('.inputfile');
-const label = input.nextElementSibling;
-const labelVal = label.innerHTML;
 const ocrForm = document.querySelector('#ocr-form');
 const select = document.querySelector('#select');
 const ocrUrl = document.querySelector('#ocr-url');
 const language = document.querySelector('#language');
-input.addEventListener('change', function(e) {
-    var fileName = '';
-    if (this.files && this.files.length > 1)
-        fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
-    else
-        fileName = e.target.value.split('\\').pop();
-
-    if (fileName)
-        label.querySelector('span').innerHTML = fileName;
-    else
-        label.innerHTML = labelVal;
-});
 
 ocrForm.addEventListener('submit', (e) => {
     console.log('hello');
