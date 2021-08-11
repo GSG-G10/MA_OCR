@@ -53,15 +53,19 @@ ocrForm.addEventListener('submit', (e) => {
 const changeFileUrl = document.querySelector('.type-select');
 const inputField = document.querySelector('.input-img-input');
 const urlInput = document.querySelector('.url-input');
+const textLabel = document.querySelector('.input-img-label');
+const btnSubmit = document.querySelector('.input-btn');
 
 changeFileUrl.addEventListener('click', () => {
     const typeFile = select.options[select.selectedIndex].value;
     if (typeFile === 'file') {
         urlInput.style.display = 'none';
         inputField.style.display = 'block';
+        textLabel.textContent = 'Choose your Picture';
     } else if (typeFile === 'url') {
         inputField.style.display = 'none';
         urlInput.style.display = 'block';
+        textLabel.textContent = 'Enter Picture Url';
     }
 });
 
@@ -72,3 +76,13 @@ const imgRenderUrl = () => {
 const imgErrHandler = () => {
     ocrImg.src = './img/defalut.png';
 }
+
+
+btnSubmit.addEventListener('click', () => {
+    const validEmail = urlInput.value.includes('https://www.google.com');
+    if (urlInput.value === '') {
+        urlInput.placeholder = 'This Field cannot be empty !';
+    } else if (validEmail === false) {
+        urlInput.placeholder = 'Please Enter a Valid Link ! ';
+    }
+});
