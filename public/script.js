@@ -16,33 +16,33 @@ const imgRender = () => {
   } else ocrImg.src = './img/defalut.png';
 };
 ocrForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  if (select.value == 'file') {
-    fetch('/ocr/file', {
-      body: new FormData(ocrForm),
-      method: 'post',
-    }).then((response) => response.json())
-      .then((data) => {
-        if (textArea.firstChild) textArea.removeChild(textArea.firstChild);
-        textArea.appendChild(document.createTextNode(data == '' ? 'The img doesn\'t include any text...' : data));
-      }).catch((err) => console.log(err));
-  } else {
-    fetch('/ocr/url', {
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        link: ocrUrl.value,
-        lang: language.value,
-      }),
-      method: 'post',
-    }).then((response) => response.json())
-      .then((data) => {
-        if (textArea.firstChild) textArea.removeChild(textArea.firstChild);
-        textArea.appendChild(document.createTextNode(data == '' ? 'The img doesn\'t include any text...' : data));
-      }).catch((err) => console.log(err));
-  }
+    e.preventDefault();
+    if (select.value == 'file') {
+        fetch('/ocr/file', {
+                body: new FormData(ocrForm),
+                method: 'post',
+            }).then((response) => response.json())
+            .then((data) => {
+                if (textArea.firstChild) textArea.removeChild(textArea.firstChild);
+                textArea.appendChild(document.createTextNode(data == '' ? 'The img doesn\'t include any text...' : data));
+            }).catch((err) => console.log(err));
+    } else {
+        fetch('/ocr/url', {
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    link: ocrUrl.value,
+                    lang: language.value,
+                }),
+                method: 'post',
+            }).then((response) => response.json())
+            .then((data) => {
+                if (textArea.firstChild) textArea.removeChild(textArea.firstChild);
+                textArea.appendChild(document.createTextNode(data == '' ? 'The img doesn\'t include any text...' : data));
+            }).catch((err) => console.log(err));
+    }
 });
 
 const changeFileUrl = document.querySelector('.type-select');
