@@ -1,11 +1,11 @@
 # MA_OCR
 
 ## Team members
-* [Mohammed Mansour] (https://github.com/M7Mansour)
-* [Ahmed Abadi] (https://github.com/AhemdAboAbadi)
+* [Mohammed Mansour](https://github.com/M7Mansour)
+* [Ahmed Abadi](https://github.com/AhemdAboAbadi)
 
 ## Website URL
-  * https://gsg-g10.github.io/AudioGalaxy/
+  * 
 
 ## He described
   * Our site provides the conversion of text through a file via the device or URL
@@ -14,14 +14,14 @@
   
 
 ## Technique. used
-* [Git Work Flow] ()
-* [npm modules] ()
-* [jst] ()
+* [Git Work Flow]()
+* [npm modules]()
+* [jst]()
 * [programming language]()
-* [CSS] ()
-* [Java Script (JS)] ()
-* [API] ()
-* [Express] ()
+* [CSS]()
+* [Java Script (JS)]()
+* [API]()
+* [Express]()
 
 
 ## User Stories
@@ -29,9 +29,8 @@
 * User will be able to see the selected image
 * The user will be able to read the output in the results box
 
-## Installing the project locally:
->`` git clone https://github.com/GSG-G10/AudioGalaxy.git”
-> ``cd AudioGalaxy''
-> `` code. ""
-> ``npm install''
-* `` Run your own live server. ""
+## Installation
+* clone repo git clone
+* cd MA_OCR
+* npm install
+* Run the code node src/server.js
