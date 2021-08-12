@@ -2,13 +2,14 @@
     "name": "ma_ocr",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "server.js",
     "directories": {
         "test": "test"
     },
     "scripts": {
         "test": "jest test/test.js",
-        "dev": "nodemon ./src/server.js"
+        "dev": "nodemon ./src/server.js",
+        "start": "node src/server.js"
     },
     "repository": {
         "type": "git",
