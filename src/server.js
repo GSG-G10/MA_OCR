@@ -6,7 +6,7 @@ const { notFoundController, serverErrController } = require('./controllers');
 const app = express();
 
 const { ocrRouter, languagesRouter } = require('./Routes');
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 app.use(compression());
 
